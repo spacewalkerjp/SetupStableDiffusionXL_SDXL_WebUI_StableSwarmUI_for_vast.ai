@@ -45,13 +45,16 @@ ssh -p XXXXX root@AAA.BBB.CCC.DDD -L 7801:localhost:7801
 apt-get install vim unzip libgl1-mesa-dev libcairo2-dev wget git -y
 apt-get install python3 python3-venv python3-dev build-essential -y
 apt-get install dotnet-sdk-7.0 -y
-adduser user1 --disabled-password --gecos ""
-su user1
+git clone https://github.com/Stability-AI/StableSwarmUI
+cd StableSwarmUI
+./launch-linux.sh --launch_mode	none
 ```
+* access test with your local PC's web browser
+   * http://localhost:7801
 
 ```sh
-
-
+adduser user1 --disabled-password --gecos ""
+su user1
 ```
 
 6.2 step2 (as user1 = not root user)

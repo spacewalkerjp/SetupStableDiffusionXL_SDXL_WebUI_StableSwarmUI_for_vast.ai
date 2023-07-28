@@ -40,65 +40,46 @@ ssh -p XXXXX root@AAA.BBB.CCC.DDD -L 7801:localhost:7801 -L 7820:localhost:7820
 ```
 5. Connect the instance via SSH with the above `4.` ssh command.
 6. Install the Stable Diffusion WebUI(StableSwarmUI)
-6.1 step1 (as ROOT)
 ```sh
 apt-get install vim unzip libgl1-mesa-dev libcairo2-dev wget git -y
-apt-get install python3 python3-venv python3-dev build-essential -y
+apt-get install python3 python3-venv python3-dev python3-pip build-essential -y
 apt-get install dotnet-sdk-7.0 -y
+
+cd ~
+mkdir SwarmUI
+cd SwarmUI
 git clone https://github.com/Stability-AI/StableSwarmUI
 cd StableSwarmUI
 ./launch-linux.sh --launch_mode	none
 ```
 
-6.2 step2 `StableSwarmUI Installr` by your web browser
-* access test with your local PC's web browser
+7 Proceed `StableSwarmUI Installer` by your web browser
+* access the installer page with your local PC's web browser
    * http://localhost:7801
-* 1) Agree licenses
-* 2) Select your favorite UI theme.
+* 1) Agree the licenses `Stable Diffusion Model License`
+* 2) Select your favorite UI theme `Choose a theme:`
 * 3) Select a checkbox of `Just Yourself On This PC` for the question `Who is this StableSwarmUI installation going to be used by?`
 * 4) Select a checkbox of `ComfyUI (Local)` for the question `What backend would you like to use?`
 * 5) Select your favorite checkpoints. e.g. `Stable Diffusion XL 1.0 (Base)` & `Stable Diffusion XL 1.0 (Refiner)`
 * 6) start install with `Yes, I'm sure (Install Now)` button.
 
+8. Have fun!
+* access Stable Diffusion WebUI(SwarmUI) with your local PC's web browser
+   * http://localhost:7801
+
+9. Access ComfyUI (backend)
+* access ComfyUI backend with your local PC's web browser
+   * http://localhost:7820
 
 
-8. Setting the SDXL refiner model
-* `Settings` tab on the top menu
-* `User interface`
-* add `sd_model_refiner` into `Quicksettings list`.
-* Apply setting
-* Restart server
-
-9. Download VAE 
-```sh
-cd ~
-cd automatic
-cd models
-mkdir VAE
-cd VAE
-wget https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors
-cd ~/automatic
-./webui.sh --backend diffusers
-```
-
-* (webui) Settins -> Stable Diffusion -> Select VAE
-
-
-10. Have fun!
-
-
-
-# Download the outputs from the instance to local PC.
-
-Execute from your Local PC's terminal
-```sh
-scp -r -P XXXXX root@AAA.BBB.CCC.DDD:/home/user1/automatic/outputs ./outputs/
-```
 
 
 # Ref. ( &Special thanks)
 * https://cloud.vast.ai
-* https://github.com/vladmandic/automatic
+* https://github.com/Stability-AI/StableSwarmUI
+* https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0
+* https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0
+* https://huggingface.co/stabilityai/sdxl-vae
 * https://hub.docker.com/r/nvidia/cuda/tags
 * https://pytorch.org/get-started/pytorch-2.0/
 * https://github.com/CompVis/stable-diffusion

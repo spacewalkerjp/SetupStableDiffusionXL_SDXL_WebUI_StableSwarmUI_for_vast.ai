@@ -33,10 +33,10 @@
 ```sh
 ssh -p XXXXX root@AAA.BBB.CCC.DDD -L 8080:localhost:8080
 ```
-4. Paste the command into your terminal/command prompt and add `-L 7860:localhost:7860` for browser access (SSH local port fowarding)
+4. Paste the command into your terminal/command prompt and add `-L 7801:localhost:7801 -L 7820:localhost:7820` for browser access (SSH local port fowarding)
 * ex)
 ```sh
-ssh -p XXXXX root@AAA.BBB.CCC.DDD -L 7801:localhost:7801
+ssh -p XXXXX root@AAA.BBB.CCC.DDD -L 7801:localhost:7801 -L 7820:localhost:7820
 ```
 5. Connect the instance via SSH with the above `4.` ssh command.
 6. Install the Stable Diffusion WebUI(StableSwarmUI)

@@ -39,7 +39,7 @@ ssh -p XXXXX root@AAA.BBB.CCC.DDD -L 8080:localhost:8080
 ssh -p XXXXX root@AAA.BBB.CCC.DDD -L 7801:localhost:7801
 ```
 5. Connect the instance via SSH with the above `4.` ssh command.
-6. Install the Stable Diffusion WebUI(SD.Next)
+6. Install the Stable Diffusion WebUI(StableSwarmUI)
 6.1 step1 (as ROOT)
 ```sh
 apt-get install vim unzip libgl1-mesa-dev libcairo2-dev wget git -y
@@ -49,41 +49,18 @@ git clone https://github.com/Stability-AI/StableSwarmUI
 cd StableSwarmUI
 ./launch-linux.sh --launch_mode	none
 ```
+
+6.2 step2 `StableSwarmUI Installr` by your web browser
 * access test with your local PC's web browser
    * http://localhost:7801
+* 1) Agree licenses
+* 2) Select your favorite UI theme.
+* 3) Select a checkbox of `Just Yourself On This PC` for the question `Who is this StableSwarmUI installation going to be used by?`
+* 4) Select a checkbox of `ComfyUI (Local)` for the question `What backend would you like to use?`
+* 5) Select your favorite checkpoints. e.g. `Stable Diffusion XL 1.0 (Base)` & `Stable Diffusion XL 1.0 (Refiner)`
+* 6) start install with `Yes, I'm sure (Install Now)` button.
 
-```sh
-adduser user1 --disabled-password --gecos ""
-su user1
-```
 
-6.2 step2 (as user1 = not root user)
-```sh
-cd ~
-git clone https://github.com/vladmandic/automatic
-cd automatic
-./webui.sh --backend diffusers
-
-# if you want to download old SD checkpoint(model), select `y(yes)`
-
-```
-* access test with your local PC's web browser
-   * http://localhost:7860
-   * Can you access webui(SD.Next)?
-* the next step is install SDXL model.
-  
-7. Download SDXL model from SD.Next(WebUI)
-* http://localhost:7860
-* `Models` tab on the top menu
-* `Huggingface` tab on the sub menu of `Models` tab
-   * 1a) seach models : `sdxl`
-   * 2a) select model : `stabilityai/stable-diffusion-xl-base-1.0`
-   * 4a) click `Download model` button
-   * (wait until finishing download) 
-   * 1b) seach models : `sdxl`
-   * 2b) select model : `stabilityai/stable-diffusion-xl-refiner-1.0`
-   * 4b) click `Download model` button
-   * (wait until finishing download)
 
 8. Setting the SDXL refiner model
 * `Settings` tab on the top menu

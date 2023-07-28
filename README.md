@@ -63,9 +63,13 @@ cd StableSwarmUI
 * 5) Select your favorite checkpoints. e.g. `Stable Diffusion XL 1.0 (Base)` & `Stable Diffusion XL 1.0 (Refiner)`
 * 6) start install with `Yes, I'm sure (Install Now)` button.
 
-8. Have fun!
+8. Start the Stable Diffusion WebUI(SwarmUI) and have fun! 
 * access Stable Diffusion WebUI(SwarmUI) with your local PC's web browser
    * http://localhost:7801
+* Note: Don't forget to select sd_xl_base_1.0, etc. from the `Model:` tab at the bottom of the screen!
+
+<img width="1006" alt="image" src="https://github.com/spacewalkerjp/SetupStableDiffusionXL_SDXL_WebUI_StableSwarmUI_for_vast.ai/assets/3334082/c73eba1c-de36-4c0f-9bd1-adfb3991843d">
+
 
 9. Access ComfyUI (backend)
 * access ComfyUI backend with your local PC's web browser

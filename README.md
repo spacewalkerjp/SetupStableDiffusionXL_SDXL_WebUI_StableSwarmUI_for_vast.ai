@@ -75,6 +75,12 @@ cd StableSwarmUI
 * access ComfyUI backend with your local PC's web browser
    * http://localhost:7820
 
+# Download the outputs from the instance to local PC.
+
+Execute from your Local PC's terminal
+```sh
+scp -r -P XXXXX root@aaa.bbb.ccc.ddd:/root/SwarmUI/StableSwarmUI/Output ./Output/
+```
 
 
 

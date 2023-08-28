@@ -1,5 +1,5 @@
 # Setup Stable Diffusion XL(SDXL) + WebUI(StableSwarmUI) for_vast.ai
-* 2023/07/29 ver : StableSwarmUI 0.5-Alpha & SDXL 1.0
+* 2023/08/23 ver : StableSwarmUI 0.5.3-Alpha & SDXL 1.0
    * Ref. https://github.com/Stability-AI/StableSwarmUI
    * Ref. https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0
    * Ref. https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0
